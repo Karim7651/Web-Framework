@@ -1,0 +1,8 @@
+7
+110O:\Engineering\courses\type script\Udemy - Typescript The Complete Developer's Guide 2023-8\web framework\dist133949665495549900 1
+116O:\Engineering\courses\type script\Udemy - Typescript The Complete Developer's Guide 2023-8\web framework\index.html133949664752420297 0
+136O:\Engineering\courses\type script\Udemy - Typescript The Complete Developer's Guide 2023-8\web framework\dist\web framework.34df32e0.js133949665495519867 0
+109O:\Engineering\courses\type script\Udemy - Typescript The Complete Developer's Guide 2023-8\web framework\src133949664832451259 1
+118O:\Engineering\courses\type script\Udemy - Typescript The Complete Developer's Guide 2023-8\web framework\src\index.ts133949665078165531 0
+121O:\Engineering\courses\type script\Udemy - Typescript The Complete Developer's Guide 2023-8\web framework\dist\index.html133949665494912932 0
+140O:\Engineering\courses\type script\Udemy - Typescript The Complete Developer's Guide 2023-8\web framework\dist\web framework.34df32e0.js.map133949665495549900 0
