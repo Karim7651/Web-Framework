@@ -1,9 +1,12 @@
+import axios, { AxiosResponse } from 'axios';
+
 // Optional interface
 // It can have a name
 // It can have an age
 // if it does have both that's totally okay
 //it it doesn't have any that's okay aswell
 interface UserProps {
+  id?: string;
   name?: string;
   age?: number;
 }
@@ -34,10 +37,30 @@ export class User {
     this.events[eventName] = handlers;
   }
   //run all callback functions related to some event
-  trigger(eventName:string):void{
+  trigger(eventName: string): void {
     const handlers = this.events[eventName] || [];
-    for(let handler of handlers){
-        handler();
+    for (let handler of handlers) {
+      handler();
+    }
+  }
+  fetch(): void {
+    axios
+      .get(`http://localhost:3000/users/${this.get('id')}`)
+      .then((response: AxiosResponse): void => {
+        this.set(response.data);
+      });
+  }
+  //has id : exists in backend (put:replace : id)
+  //doesn't have id : doesn't exist in backend (post : new resource : no id param)
+  save(): void {
+    if (this.get('id')) {
+      //put
+      axios.put(`http://localhost:3000/users/${this.get('id')}`, this.data);
+    } else {
+      //post
+      axios
+        .post(`http://localhost:3000/users/`, this.data)
+        .then((Response: AxiosResponse): void => {});
     }
   }
 }

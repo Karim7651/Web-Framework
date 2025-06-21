@@ -160,7 +160,7 @@
       });
     }
   }
-})({"aNokC":[function(require,module,exports,__globalThis) {
+})({"3dtlh":[function(require,module,exports,__globalThis) {
 var global = arguments[3];
 var HMR_HOST = null;
 var HMR_PORT = null;
@@ -667,63 +667,10 @@ function hmrAccept(bundle /*: ParcelRequire */ , id /*: string */ ) {
 }
 
 },{}],"gH3Lb":[function(require,module,exports,__globalThis) {
-var _user = require("./models/User");
-const user = new (0, _user.User)({
-    name: "karim",
-    age: 24
-});
-user.on("click", ()=>{
-    console.log("test1");
-});
-user.on("click", ()=>{
-    console.log("test2");
-});
-user.on("dfghsdfhsd", ()=>{
-    console.log("test3");
-});
-user.trigger("dfghsdfhsd");
-
-},{"./models/User":"hjS3N"}],"hjS3N":[function(require,module,exports,__globalThis) {
-// Optional interface
-// It can have a name
-// It can have an age
-// if it does have both that's totally okay
-//it it doesn't have any that's okay aswell
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 parcelHelpers.defineInteropFlag(exports);
-parcelHelpers.export(exports, "User", ()=>User);
-class User {
-    //object structure => better to use interface than inline
-    // constructor(private data:{name:string;age:number}){
-    // }
-    constructor(data){
-        this.data = data;
-        this.//to store type of event & related callbacks
-        //we don't know the name of keys so we'd do it like that [key:string]
-        events = {};
-    }
-    get(propName) {
-        return this.data[propName];
-    }
-    set(update) {
-        //copies update object to this.data object
-        Object.assign(this.data, update);
-    }
-    //register an event that would trigger a callback function
-    //function annotation
-    on(eventName, callback) {
-        const handlers = this.events[eventName] || [];
-        handlers.push(callback);
-        this.events[eventName] = handlers;
-    }
-    //run all callback functions related to some event
-    trigger(eventName) {
-        const handlers = this.events[eventName] || [];
-        for (let handler of handlers)handler();
-    }
-}
 
-},{"@parcel/transformer-js/src/esmodule-helpers.js":"4spqU"}],"4spqU":[function(require,module,exports,__globalThis) {
+},{"@parcel/transformer-js/src/esmodule-helpers.js":"jnFvT"}],"jnFvT":[function(require,module,exports,__globalThis) {
 exports.interopDefault = function(a) {
     return a && a.__esModule ? a : {
         default: a
@@ -753,6 +700,6 @@ exports.export = function(dest, destName, get) {
     });
 };
 
-},{}]},["aNokC","gH3Lb"], "gH3Lb", "parcelRequire94c2", {})
+},{}]},["3dtlh","gH3Lb"], "gH3Lb", "parcelRequire94c2", {})
 
 //# sourceMappingURL=web framework.34df32e0.js.map
